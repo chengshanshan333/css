@@ -24,7 +24,7 @@ public class DataType2 {
     // 案例1
     double a = 1;
     double b = 0.99;
-    System.out.println(a - b -b );
+    System.out.println(a - b -b-b );
 
     // 案例2
     float c = 1;
