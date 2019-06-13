@@ -58,7 +58,7 @@ public class Topic11 {
         String filePath = "/Users/chengss/IdeaProjects/css-project/css/src/main/java/homeworkday02/topic11_readData.txt";
         List<User> s = readTxtFile(filePath);
         for (int i = 0; i < s.size(); i++) {
-            System.out.println(s.get(i).toString());
+            s.get(i).printMsg();
         }
     }
 
