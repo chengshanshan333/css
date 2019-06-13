@@ -2,9 +2,6 @@ import org.junit.Test;
 import com.css.User;
 import com.css.Calculator;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 
 
 public class CssDay01 {
@@ -96,8 +93,39 @@ public class CssDay01 {
     @Test
     //8、totile 首字母大写
     public void ToTitle(){
-        String title = "i am a student, this is a big world";
-        System.out.println("原始字符串："+title);
+        String s="hello";
+        if(Character.isUpperCase(s.charAt(0)))
+            System.out.println(s);
+        else
+            System.out.println((new StringBuilder()).append(Character.toUpperCase(s.charAt(0))).append(s.substring(1)).toString());
+
+    }
+
+    //9、练习int数组定义，赋值
+    //10、冒泡排序
+    @Test
+    public void Sort(){
+            int[] a = {999,2333,3,8989};
+            System.out.println("排序之前:");
+            for (int i : a) {
+                System.out.print(i+"\t");
+            }
+
+                //冒泡排序实现
+            for(int i=0;i<a.length-1;i++){
+                for(int j=0;j<a.length-i-1;j++){
+                    if(a[j]>a[j+1]){
+                        int temp = a[j];
+                        a[j] = a[j+1];
+                        a[j+1] = temp;
+                    }
+                }
+            }
+
+            System.out.println("\n排序之后:");
+            for (int i : a) {
+                System.out.print(i+"\t");
+            }
     }
     @Test
     //13、user对象相关操作

@@ -1,0 +1,12 @@
+1,student_bj1,gril,98,北京
+2,student_bj2,boy,12,北京
+3,student_bj3,gril,33,北京
+4,student_bj4,boy,44,北京
+5,student_sh1,gril,34,上海
+6,student_sh2,boy,56,上海
+7,student_sh1,gril,88,上海
+8,student_sh2,boy,77,上海
+9,student_gz1,gril,76,广州
+10,student_gz2,boy,100,广州
+11,student_gz1,gril,44,广州
+12,student_gz2,boy,66,广州

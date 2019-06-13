@@ -47,4 +47,8 @@ public class User {
     public static  void  printMsg(){
         System.out.println("你当前正在调用User类的静态方法");
     }
+
+    public  static void main(String[] args){
+
+    }
 }
