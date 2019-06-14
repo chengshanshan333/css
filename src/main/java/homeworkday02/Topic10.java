@@ -125,8 +125,18 @@ public class Topic10 {
         list.add(new User(10,"北京4","gril",60,"北京市",30));
         list.add(new User(11,"北京5","boy",50,"北京市",22));
         list.add(new User(12,"北京6","gril",100,"北京市",22));
-
-        System.out.println("***********************");
+        System.out.println("要求1: 遍历集合,打印所有内部数据");
+        for(User u:list){
+            u.printMsg();
+        }
+        System.out.println("****************************");
+        System.out.println("要求2: 按照年纪(age)进行分组");
+        groupByAgeOrScoreOrGender("age",list);
+        System.out.println("****************************");
+        System.out.println("要求3: 按照分数(score)范围分组");
+        groupByScore(list);
+        System.out.println("****************************");
+        System.out.println("要求5: 基于性别分组,求男同学的平均分,求女同学的平均分");
         Map<Object, List<User>> result = groupByAgeOrScoreOrGender("gender",list);
         float boyAvgScore = 0;
         float grilAvgScore = 0;
