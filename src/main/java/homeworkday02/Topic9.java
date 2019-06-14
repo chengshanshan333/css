@@ -12,5 +12,15 @@ package homeworkday02;
  * @author haoc
  */
 public class Topic9 {
+    public  static void main(String[] args){
+        Load load1 = new Gaosu("京广高速");
+        Car car1 = new Car("宝马");
+        load1.PaoChe(car1);
+        Load load2 = new Fulu("北京三环辅路");
+        Car car2 = new Car("奥拓");
+        load2.PaoChe(car2);
+        Load load3 = new Load("调用父类");
+        load3.PaoChe(car1);
+    }
 
 }

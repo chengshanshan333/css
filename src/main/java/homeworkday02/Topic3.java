@@ -1,5 +1,8 @@
 package homeworkday02;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * 作业3: 实现一个计算器
  *
@@ -26,5 +29,71 @@ package homeworkday02;
  * @author haoc
  */
 public class Topic3 {
+    //判断是否为数值类型
+    public static boolean isNumeric(String str){
+        for (int i = 0; i < str.length(); i++){
+            System.out.println(str.charAt(i));
+            if (!Character.isDigit(str.charAt(i))){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args){
+        System.out.println("请输入数据和操作符，格式为：数据1 操作符 数据2");
+        Scanner in = new Scanner(System.in);
+        String lines = in.nextLine();
+        String[] strs = lines.split(" ");
+        String result ="";
+        if(strs.length<3){
+            System.out.println("输入的数据和操作符不完整，正确格式为：数据1 操作符 数据2！");
+        }else if(strs.length>3){
+            System.out.println("输入的格式有误，正确格式为：数据1 操作符 数据2！");
+        }else {
+            switch (strs[1]){
+                case "+":
+                    if(isNumeric(strs[0]) && isNumeric(strs[2])){
+                        result = String.valueOf(Integer.parseInt(strs[0]) + Integer.parseInt(strs[2]));
+                    }else {
+                        result = strs[0]+strs[1]+strs[2];
+                    }
+                    break;
+                case "-":
+                    if(isNumeric(strs[0]) && isNumeric(strs[2])){
+                        result = String.valueOf(Integer.parseInt(strs[0]) - Integer.parseInt(strs[2]));
+                    }else {
+                        result = strs[0]+strs[1]+strs[2];
+                    }
+                    break;
+                case "*":
+                    if(isNumeric(strs[0]) && isNumeric(strs[2])){
+                        result = String.valueOf(Integer.parseInt(strs[0]) * Integer.parseInt(strs[2]));
+                    }else {
+                        result = strs[0]+strs[1]+strs[2];
+                    }
+                    break;
+                case "/":
+                    if(isNumeric(strs[0]) && isNumeric(strs[2])){
+                        result = String.valueOf(Integer.parseInt(strs[0]) / Integer.parseInt(strs[2]));
+                    }else {
+                        result = strs[0]+strs[1]+strs[2];
+                    }
+                    break;
+                case "%":
+                    if(isNumeric(strs[0]) && isNumeric(strs[2])){
+                        result = String.valueOf(Integer.parseInt(strs[0]) % Integer.parseInt(strs[2]));
+                    }else {
+                        result = strs[0]+strs[1]+strs[2];
+                    }
+                    break;
+                default:
+                    System.out.println("输入的操作符不支持，目前支持的操作符为：+ - * 、 %");
+                    break;
+
+            }
+            System.out.println(strs[0]+" "+strs[1]+" "+strs[2]+" ="+result);
+        }
+    }
 
 }

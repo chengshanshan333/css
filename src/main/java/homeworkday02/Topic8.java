@@ -10,5 +10,16 @@ package homeworkday02;
  * @author haoc
  */
 public class Topic8 {
+    public static void main(String[] args){
+        Student stu = new Student("李明");
+        stu.eat();
+        stu.sleep();
+        stu.introduction();
+        Teacher tea = new Teacher("王老师");
+        tea.eat();
+        tea.sleep();
+        tea.introduction();
+    }
+
 
 }

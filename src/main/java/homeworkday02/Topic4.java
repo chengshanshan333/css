@@ -26,6 +26,9 @@ package homeworkday02;
  * @author haoc
  */
 public class Topic4 {
+    public static void main(String[] args){
+
+    }
 
 
 }
